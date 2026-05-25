@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>GAR & RAN Agencias</title>
 
+  <!-- SEO -->
+
+  <meta name="description" content="GAR & RAN Agencias ofrece traslados privados, transporte ejecutivo, renta de autos, camionetas y vans en Monterrey. Más de 30 años de experiencia.">
+
+  <meta name="keywords" content="transporte ejecutivo monterrey, renta de vans monterrey, traslados aeropuerto monterrey, renta de camionetas monterrey">
+
+  <meta name="author" content="GAR & RAN Agencias">
+
+  <meta property="og:title" content="GAR & RAN Agencias">
+  <meta property="og:description" content="Más de 30 años de experiencia en transporte privado y renta de unidades.">
+  <meta property="og:type" content="website">
+
+  <!-- FONTS -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+  <!-- ANIMACIONES -->
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -16,19 +38,18 @@
       scroll-behavior:smooth;
     }
 
-    body{
-      font-family:'Montserrat', sans-serif;
-      background:#ffffff;
-      color:#111;
-      line-height:1.6;
-    }
-
     :root{
       --gold:#c8a24d;
-      --light-gold:#e8d7a9;
       --black:#111111;
       --gray:#666;
-      --white:#fff;
+      --white:#ffffff;
+    }
+
+    body{
+      font-family:'Montserrat', sans-serif;
+      background:white;
+      color:#111;
+      line-height:1.6;
     }
 
     /* NAVBAR */
@@ -101,19 +122,18 @@
 
     .hero h1{
       font-family:'Cormorant Garamond', serif;
-      font-size:4.2rem;
-      font-weight:600;
+      font-size:4.5rem;
       margin-bottom:20px;
-      color:var(--black);
+      line-height:1.1;
     }
 
-    .hero h1 span{
+    .hero span{
       color:var(--gold);
     }
 
     .hero p{
-      font-size:1.1rem;
       color:var(--gray);
+      font-size:1.1rem;
       margin-bottom:40px;
     }
 
@@ -122,18 +142,15 @@
       padding:16px 34px;
       background:var(--gold);
       color:white;
-      text-decoration:none;
       border-radius:50px;
+      text-decoration:none;
       transition:0.3s;
       font-weight:500;
     }
 
     .btn:hover{
       transform:translateY(-3px);
-      opacity:0.9;
     }
-
-    /* SECTIONS */
 
     section{
       padding:100px 8%;
@@ -147,7 +164,6 @@
     .section-title h2{
       font-family:'Cormorant Garamond', serif;
       font-size:3rem;
-      color:var(--black);
       margin-bottom:10px;
     }
 
@@ -168,26 +184,23 @@
 
     .service-card{
       padding:40px 30px;
-      border:1px solid rgba(0,0,0,0.06);
       border-radius:20px;
-      transition:0.3s;
       background:white;
+      box-shadow:0 10px 30px rgba(0,0,0,0.06);
+      transition:0.3s;
     }
 
     .service-card:hover{
-      transform:translateY(-8px);
-      border-color:var(--gold);
+      transform:translateY(-10px);
     }
 
     .service-card h3{
-      margin-bottom:15px;
       color:var(--gold);
-      font-size:1.3rem;
+      margin-bottom:15px;
     }
 
     .service-card p{
       color:var(--gray);
-      font-size:0.95rem;
     }
 
     /* ABOUT */
@@ -203,22 +216,22 @@
       align-items:center;
     }
 
-    .about-text h2{
+    .experience{
+      font-size:5rem;
+      color:var(--gold);
       font-family:'Cormorant Garamond', serif;
+      margin-bottom:20px;
+    }
+
+    .about h2{
       font-size:3rem;
       margin-bottom:20px;
+      font-family:'Cormorant Garamond', serif;
     }
 
-    .about-text p{
+    .about p{
       color:var(--gray);
       margin-bottom:20px;
-    }
-
-    .experience{
-      font-size:4rem;
-      color:var(--gold);
-      font-weight:600;
-      font-family:'Cormorant Garamond', serif;
     }
 
     .about-image{
@@ -231,6 +244,65 @@
       background-position:center;
     }
 
+    /* VEHICLES */
+
+    .vehicle-category{
+      margin-bottom:70px;
+    }
+
+    .vehicle-category h3{
+      font-size:2rem;
+      margin-bottom:30px;
+      color:var(--gold);
+      font-family:'Cormorant Garamond', serif;
+    }
+
+    .vehicle-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .vehicle-card{
+      background:white;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .vehicle-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .vehicle-card img{
+      width:100%;
+      height:240px;
+      object-fit:cover;
+    }
+
+    .vehicle-info{
+      padding:25px;
+    }
+
+    .vehicle-info h4{
+      margin-bottom:10px;
+      color:var(--gold);
+    }
+
+    .vehicle-info p{
+      color:var(--gray);
+      margin-bottom:8px;
+      font-size:0.95rem;
+    }
+
+    .price{
+      margin-top:15px;
+      font-size:1.2rem;
+      color:black;
+      font-weight:600;
+    }
+
     /* CONTACT */
 
     .contact-container{
@@ -240,8 +312,8 @@
     }
 
     .contact-info h3{
-      margin-bottom:20px;
       color:var(--gold);
+      margin-bottom:20px;
     }
 
     .contact-info p{
@@ -257,8 +329,8 @@
 
     input, textarea{
       padding:16px;
-      border:1px solid rgba(0,0,0,0.1);
       border-radius:12px;
+      border:1px solid rgba(0,0,0,0.1);
       font-family:'Montserrat', sans-serif;
     }
 
@@ -273,10 +345,33 @@
       font-size:1rem;
     }
 
-    /* FOOTER */
+    /* WHATSAPP */
+
+    .whatsapp-float{
+      position:fixed;
+      width:65px;
+      height:65px;
+      bottom:30px;
+      right:30px;
+      background:#25D366;
+      color:white;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:30px;
+      text-decoration:none;
+      box-shadow:0 8px 25px rgba(0,0,0,0.2);
+      z-index:999;
+      transition:0.3s;
+    }
+
+    .whatsapp-float:hover{
+      transform:scale(1.1);
+    }
 
     footer{
-      background:var(--black);
+      background:black;
       color:white;
       text-align:center;
       padding:40px 20px;
@@ -286,9 +381,11 @@
       color:var(--gold);
     }
 
-    /* RESPONSIVE */
-
     @media(max-width:900px){
+
+      nav ul{
+        display:none;
+      }
 
       .hero h1{
         font-size:3rem;
@@ -299,40 +396,41 @@
         grid-template-columns:1fr;
       }
 
-      nav ul{
-        display:none;
-      }
-
       .hero img{
         width:240px;
       }
+
     }
 
   </style>
+
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
+  <!-- NAV -->
 
   <nav>
+
     <div class="logo">GAR & RAN</div>
 
     <ul>
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#cotizador">Cotizador</a></li>
       <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
+
   </nav>
 
   <!-- HERO -->
 
   <section class="hero" id="inicio">
 
-    <div class="hero-content">
+    <div class="hero-content" data-aos="fade-up">
 
-      <img src="logo.png" alt="GAR & RAN Logo">
+      <img src="logo.png" alt="GAR & RAN">
 
       <h1>
         Transporte privado con
@@ -364,7 +462,7 @@
 
     <div class="services-grid">
 
-      <div class="service-card">
+      <div class="service-card" data-aos="fade-up">
         <h3>✈️ Traslados al aeropuerto</h3>
         <p>
           Servicio puntual y cómodo para viajes personales,
@@ -372,28 +470,280 @@
         </p>
       </div>
 
-      <div class="service-card">
+      <div class="service-card" data-aos="fade-up">
         <h3>🎤 Eventos y conciertos</h3>
         <p>
-          Transporte seguro para grupos, eventos privados,
-          conciertos y ocasiones especiales.
+          Transporte seguro para grupos y ocasiones especiales.
         </p>
       </div>
 
-      <div class="service-card">
+      <div class="service-card" data-aos="fade-up">
         <h3>🏫 Transporte escolar</h3>
         <p>
-          Soluciones confiables y seguras para estudiantes
-          y familias.
+          Soluciones seguras y confiables para estudiantes.
         </p>
       </div>
 
-      <div class="service-card">
-        <h3>🚐 Renta de vans y camionetas</h3>
+      <div class="service-card" data-aos="fade-up">
+        <h3>🚐 Renta de unidades</h3>
         <p>
-          Vehículos disponibles con o sin chofer
-          para viajes locales y foráneos.
+          Autos, camionetas y vans disponibles con y sin chofer.
         </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- COTIZADOR -->
+
+  <section id="cotizador">
+
+    <div class="section-title">
+      <h2>Cotizador y Reservas</h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <!-- TRANSPORTE -->
+
+    <div class="vehicle-category">
+
+      <h3>Servicio de Transporte</h3>
+
+      <div class="vehicle-grid">
+
+        <div class="vehicle-card" data-aos="fade-up">
+
+          <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1974&auto=format&fit=crop">
+
+          <div class="vehicle-info">
+
+            <h4>✈️ Traslado sencillo</h4>
+
+            <p>Aeropuerto, hotel, conciertos y traslados privados.</p>
+
+            <div class="price">
+              Desde $900 MXN
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="vehicle-card" data-aos="fade-up">
+
+          <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1883&auto=format&fit=crop">
+
+          <div class="vehicle-info">
+
+            <h4>🚐 Servicio por horas</h4>
+
+            <p>Ideal para múltiples paradas, eventos y recorridos.</p>
+
+            <div class="price">
+              Desde $2,500 MXN
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- AUTOS -->
+
+    <div class="vehicle-category">
+
+      <h3>🚘 Autos</h3>
+
+      <div class="vehicle-grid">
+
+        <div class="vehicle-card" data-aos="fade-up">
+
+          <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=1974&auto=format&fit=crop">
+
+          <div class="vehicle-info">
+
+            <h4>Nissan Versa 2022</h4>
+
+            <p>Plata • Standard</p>
+            <p>5 pasajeros</p>
+
+            <div class="price">
+              $1,500 MXN / día
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="vehicle-card" data-aos="fade-up">
+
+          <img src="https://images.unsplash.com/photo-1494905998402-395d579af36f?q=80&w=1974&auto=format&fit=crop">
+
+          <div class="vehicle-info">
+
+            <h4>Toyota Yaris Azul 2024</h4>
+
+            <p>Automático</p>
+            <p>5 pasajeros</p>
+
+            <div class="price">
+              $1,500 MXN / día
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="vehicle-card" data-aos="fade-up">
+
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1974&auto=format&fit=crop">
+
+          <div class="vehicle-info">
+
+            <h4>Toyota Yaris Plateado 2024</h4>
+
+            <p>Automático</p>
+            <p>5 pasajeros</p>
+
+            <div class="price">
+              $1,500 MXN / día
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="vehicle-card" data-aos="fade-up">
+
+          <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=1974&auto=format&fit=crop">
+
+          <div class="vehicle-info">
+
+            <h4>Nissan March Rojo 2023</h4>
+
+            <p>Automático</p>
+            <p>5 pasajeros</p>
+
+            <div class="price">
+              $1,500 MXN / día
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <p style="margin-top:20px;color:#666;">
+        *Descuento especial en rentas mayores a 7 días.
+      </p>
+
+    </div>
+
+    <!-- CAMIONETAS -->
+
+    <div class="vehicle-category">
+
+      <h3>🚙 Camionetas</h3>
+
+      <div class="vehicle-grid">
+
+        <div class="vehicle-card" data-aos="fade-up">
+
+          <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?q=80&w=1974&auto=format&fit=crop">
+
+          <div class="vehicle-info">
+
+            <h4>Ford Wildtrak Negra 2025</h4>
+
+            <p>Automática</p>
+            <p>5 pasajeros</p>
+
+            <div class="price">
+              $2,500 MXN / día
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="vehicle-card" data-aos="fade-up">
+
+          <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1974&auto=format&fit=crop">
+
+          <div class="vehicle-info">
+
+            <h4>Toyota Sienna Café 2024</h4>
+
+            <p>Automática</p>
+            <p>7 pasajeros</p>
+
+            <div class="price">
+              $2,500 MXN / día
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- VANS -->
+
+    <div class="vehicle-category">
+
+      <h3>🚐 Vans</h3>
+
+      <div class="vehicle-grid">
+
+        <div class="vehicle-card" data-aos="fade-up">
+
+          <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=1974&auto=format&fit=crop">
+
+          <div class="vehicle-info">
+
+            <h4>Toyota Hiace</h4>
+
+            <p>12 pasajeros</p>
+            <p>2 unidades disponibles</p>
+
+            <div class="price">
+              $3,500 MXN sin chofer
+              <br>
+              $4,500 MXN con chofer
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="vehicle-card" data-aos="fade-up">
+
+          <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?q=80&w=1974&auto=format&fit=crop">
+
+          <div class="vehicle-info">
+
+            <h4>Foton</h4>
+
+            <p>16 pasajeros</p>
+            <p>2 unidades disponibles</p>
+
+            <div class="price">
+              $3,500 MXN sin chofer
+              <br>
+              $4,500 MXN con chofer
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
     </div>
@@ -406,7 +756,7 @@
 
     <div class="about-content">
 
-      <div class="about-text">
+      <div data-aos="fade-right">
 
         <div class="experience">
           +30 años
@@ -421,13 +771,12 @@
 
         <p>
           Nuestra experiencia nos ha permitido convertirnos en
-          una opción confiable para familias, empresas y viajeros
-          que buscan comodidad, puntualidad y atención personalizada.
+          una opción confiable para familias, empresas y viajeros.
         </p>
 
       </div>
 
-      <div class="about-image"></div>
+      <div class="about-image" data-aos="fade-left"></div>
 
     </div>
 
@@ -450,19 +799,25 @@
 
         <p>📍 Monterrey, Nuevo León</p>
         <p>📞 +52 81 2400 3388</p>
-        <p>📧 garrantransporte@gmail.com/p>
+        <p>📧 garrantransporte@gmail.com</p>
         <p>📱 @garran_transportes</p>
-        <p>💬 WhatsApp *8124003388</p>
+        <p>💬 WhatsApp disponible</p>
 
       </div>
 
-      <form>
+      <!-- FORMULARIO -->
 
-        <input type="text" placeholder="Nombre">
+      <form action="https://formsubmit.co/garrantransporte@gmail.com" method="POST">
 
-        <input type="email" placeholder="Correo electrónico">
+        <input type="hidden" name="_captcha" value="false">
 
-        <textarea placeholder="Escribe tu mensaje"></textarea>
+        <input type="hidden" name="_next" value="https://tusitio.vercel.app">
+
+        <input type="text" name="nombre" placeholder="Nombre" required>
+
+        <input type="email" name="correo" placeholder="Correo electrónico" required>
+
+        <textarea name="mensaje" placeholder="Escribe tu mensaje"></textarea>
 
         <button class="btn">
           Enviar mensaje
@@ -479,6 +834,25 @@
   <footer>
     © 2025 <span>GAR & RAN Agencias</span> — Todos los derechos reservados
   </footer>
+
+  <!-- WHATSAPP -->
+
+  <a href="https://wa.me/528124003388"
+  class="whatsapp-float"
+  target="_blank">
+  💬
+  </a>
+
+  <!-- ANIMACIONES -->
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init({
+      duration:1000,
+      once:true
+    });
+  </script>
 
 </body>
 </html>
