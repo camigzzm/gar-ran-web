@@ -48,8 +48,6 @@
       line-height:1.6;
     }
 
-    /* NAVBAR */
-
     nav{
       width:100%;
       padding:22px 8%;
@@ -89,8 +87,6 @@
     nav a:hover{
       color:var(--gold);
     }
-
-    /* HERO */
 
     .hero{
       min-height:100vh;
@@ -173,8 +169,6 @@
       margin:auto;
     }
 
-    /* SERVICES */
-
     .services-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -201,8 +195,6 @@
     .service-card p{
       color:var(--gray);
     }
-
-    /* VEHICLES */
 
     .vehicle-grid{
       display:grid;
@@ -249,8 +241,6 @@
       text-align:center;
     }
 
-    /* ABOUT */
-
     .about{
       background:#faf8f3;
     }
@@ -292,8 +282,6 @@
       background-position:center;
     }
 
-    /* CONTACT */
-
     .contact-container{
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -328,8 +316,6 @@
       min-height:150px;
       resize:none;
     }
-
-    /* MODAL */
 
     .modal{
       display:none;
@@ -373,8 +359,6 @@
       cursor:pointer;
     }
 
-    /* WHATSAPP */
-
     .whatsapp-float{
       position:fixed;
       width:65px;
@@ -398,8 +382,6 @@
       transform:scale(1.1);
     }
 
-    /* FOOTER */
-
     footer{
       background:black;
       color:white;
@@ -410,8 +392,6 @@
     footer span{
       color:var(--gold);
     }
-
-    /* RESPONSIVE */
 
     @media(max-width:900px){
 
@@ -444,8 +424,6 @@
 
 <body>
 
-  <!-- NAVBAR -->
-
   <nav>
 
     <div class="logo">GAR & RAN</div>
@@ -459,8 +437,6 @@
     </ul>
 
   </nav>
-
-  <!-- HERO -->
 
   <section class="hero" id="inicio">
 
@@ -487,8 +463,6 @@
 
   </section>
 
-  <!-- SERVICIOS -->
-
   <section id="servicios">
 
     <div class="section-title">
@@ -514,15 +488,18 @@
       </div>
 
       <div class="service-card" data-aos="fade-up">
+        <h3>✈️ Transporte de personal</h3>
+        <p>Transporte seguro y puntual para empleados y empresas.</p>
+      </div>
+
+      <div class="service-card" data-aos="fade-up">
         <h3>🚐 Renta de unidades</h3>
-        <p>Autos, camionetas y vans disponibles con y sin chofer.</p>
+        <p>Autos, camionetas y vans disponibles para viajes locales y foráneos.</p>
       </div>
 
     </div>
 
   </section>
-
-  <!-- COTIZADOR -->
 
   <section id="cotizador">
 
@@ -533,45 +510,20 @@
 
     <div class="vehicle-grid">
 
-      <!-- VERSA -->
-
       <div class="vehicle-card" data-aos="fade-up">
 
-        <img src="https://www.nissanlatam.com/Catalogos/versa2020/peru/images/color/3.jpg">
+        <img src="https://www.nissanautopolis.com/resourcefiles/vehicle-details-color-images/versa-gris-oxford.jpg">
 
         <div class="vehicle-info">
 
-          <h4>Nissan Versa 2022</h4>
-
-          <p>🚗 Standard</p>
-          <p>👥 5 pasajeros</p>
-          <p>💰 $1,500 MXN / día</p>
-
-          <button class="btn"
-          onclick="openQuote('Nissan Versa 2022',1500)">
-            Cotizar ahora
-          </button>
-
-        </div>
-
-      </div>
-
-      <!-- YARIS -->
-
-      <div class="vehicle-card" data-aos="fade-up">
-
-        <img src="https://www.centromotorsa.com.ar/wp-content/uploads/2017/01/gris-azulado.jpg">
-
-        <div class="vehicle-info">
-
-          <h4>Toyota Yaris Azul 2024</h4>
+          <h4>Nissan Versa 2025</h4>
 
           <p>⚙️ Automático</p>
           <p>👥 5 pasajeros</p>
           <p>💰 $1,500 MXN / día</p>
 
           <button class="btn"
-          onclick="openQuote('Toyota Yaris Azul 2024',1500)">
+          onclick="openQuote('Nissan Versa 2025',1500)">
             Cotizar ahora
           </button>
 
@@ -579,11 +531,51 @@
 
       </div>
 
-      <!-- WILDTRAK -->
+      <div class="vehicle-card" data-aos="fade-up">
+
+        <img src="https://www.nissanlapaz.com.mx/resourcefiles/newvehicleimages/march.jpg">
+
+        <div class="vehicle-info">
+
+          <h4>Nissan March 2024</h4>
+
+          <p>⚙️ Automático</p>
+          <p>👥 4 pasajeros</p>
+          <p>💰 $1,200 MXN / día</p>
+
+          <button class="btn"
+          onclick="openQuote('Nissan March 2024',1200)">
+            Cotizar ahora
+          </button>
+
+        </div>
+
+      </div>
 
       <div class="vehicle-card" data-aos="fade-up">
 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/2025_Ford_Ranger_Wildtrak_X_EcoBlue_4x4_-_1996cc_2.0_%28205PS%29_Diesel_-_Agate_Black_-_02-2025%2C_Front.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original">
+        <img src="https://tuagenciadelrio.com/wp-content/uploads/2023/06/HB-LT-Mugshot-34-frontal_izquierdo_Alta_GGB-Azul-Persuasion.png">
+
+        <div class="vehicle-info">
+
+          <h4>Chevrolet Aveo 2025</h4>
+
+          <p>⚙️ Automático</p>
+          <p>👥 5 pasajeros</p>
+          <p>💰 $1,500 MXN / día</p>
+
+          <button class="btn"
+          onclick="openQuote('Chevrolet Aveo 2025',1500)">
+            Cotizar ahora
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="vehicle-card" data-aos="fade-up">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/2025_Ford_Ranger_Wildtrak_X_EcoBlue_4x4_-_1996cc_2.0_%28205PS%29_Diesel_-_Agate_Black_-_02-2025%2C_Front.jpg">
 
         <div class="vehicle-info">
 
@@ -591,18 +583,16 @@
 
           <p>⚙️ Automática</p>
           <p>👥 5 pasajeros</p>
-          <p>💰 $2,500 MXN / día</p>
+          <p>💰 $3,500 MXN / día</p>
 
           <button class="btn"
-          onclick="openQuote('Ford Wildtrak Negra 2025',2500)">
+          onclick="openQuote('Ford Wildtrak Negra 2025',3500)">
             Cotizar ahora
           </button>
 
         </div>
 
       </div>
-
-      <!-- SIENNA -->
 
       <div class="vehicle-card" data-aos="fade-up">
 
@@ -610,22 +600,20 @@
 
         <div class="vehicle-info">
 
-          <h4>Toyota Sienna Café 2024</h4>
+          <h4>Toyota Sienna 2022</h4>
 
           <p>⚙️ Automática</p>
-          <p>👥 7 pasajeros</p>
-          <p>💰 $2,500 MXN / día</p>
+          <p>👥 8 pasajeros</p>
+          <p>💰 $2,800 MXN / día</p>
 
           <button class="btn"
-          onclick="openQuote('Toyota Sienna Café 2024',2500)">
+          onclick="openQuote('Toyota Sienna 2022',2800)">
             Cotizar ahora
           </button>
 
         </div>
 
       </div>
-
-      <!-- HIACE -->
 
       <div class="vehicle-card" data-aos="fade-up">
 
@@ -633,15 +621,13 @@
 
         <div class="vehicle-info">
 
-          <h4>Toyota Hiace</h4>
+          <h4>Toyota Hiace 2020</h4>
 
           <p>👥 12 pasajeros</p>
-          <p>🚐 2 unidades disponibles</p>
-          <p>💰 $3,500 por dia sin chofer</p>
-          <p>💰 $4,500 por dia con chofer</p>
+          <p>💰 $3,500 MXN / día</p>
 
           <button class="btn"
-          onclick="openQuote('Toyota Hiace',4500)">
+          onclick="openQuote('Toyota Hiace 2020',3500)">
             Cotizar ahora
           </button>
 
@@ -649,7 +635,25 @@
 
       </div>
 
-      <!-- FOTON -->
+      <div class="vehicle-card" data-aos="fade-up">
+
+        <img src="https://http2.mlstatic.com/D_NQ_NP_993146-MLA81868231811_012025-F.jpg">
+
+        <div class="vehicle-info">
+
+          <h4>Toyota Hiace 2019</h4>
+
+          <p>👥 15 pasajeros</p>
+          <p>💰 $3,500 MXN / día</p>
+
+          <button class="btn"
+          onclick="openQuote('Toyota Hiace 2019',3500)">
+            Cotizar ahora
+          </button>
+
+        </div>
+
+      </div>
 
       <div class="vehicle-card" data-aos="fade-up">
 
@@ -657,15 +661,33 @@
 
         <div class="vehicle-info">
 
-          <h4>Foton</h4>
+          <h4>Foton Royal Saloon 2024</h4>
 
           <p>👥 16 pasajeros</p>
-          <p>🚐 2 unidades disponibles</p>
-          <p>💰 $3,500 sin chofer</p>
-          <p>💰 $4,500 con chofer</p>
+          <p>💰 $3,500 MXN / día</p>
 
           <button class="btn"
-          onclick="openQuote('Foton',4500)">
+          onclick="openQuote('Foton Royal Saloon 2024',3500)">
+            Cotizar ahora
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="vehicle-card" data-aos="fade-up">
+
+        <img src="https://klpsa.com/wp-content/uploads/2024/01/Kingo-L-Vans-2.jpg">
+
+        <div class="vehicle-info">
+
+          <h4>King Long Furgo 2024</h4>
+
+          <p>👥 16 pasajeros</p>
+          <p>💰 $3,500 MXN / día</p>
+
+          <button class="btn"
+          onclick="openQuote('King Long Furgo 2024',3500)">
             Cotizar ahora
           </button>
 
@@ -676,8 +698,6 @@
     </div>
 
   </section>
-
-  <!-- ABOUT -->
 
   <section class="about" id="nosotros">
 
@@ -709,8 +729,6 @@
 
   </section>
 
-  <!-- CONTACTO -->
-
   <section id="contacto">
 
     <div class="section-title">
@@ -725,7 +743,7 @@
         <h3>Información</h3>
 
         <p>📍 Monterrey, Nuevo León</p>
-        <p>📞 +52 81 2400 3388</p>
+        <p>📞 +52 81 2337 2627</p>
         <p>📧 garrantransporte@gmail.com</p>
         <p>📱 @garran_transportes</p>
         <p>💬 WhatsApp disponible</p>
@@ -752,13 +770,9 @@
 
   </section>
 
-  <!-- FOOTER -->
-
   <footer>
     © 2025 <span>GAR & RAN Agencias</span> — Todos los derechos reservados
   </footer>
-
-  <!-- MODAL -->
 
   <div id="quoteModal" class="modal">
 
@@ -787,15 +801,11 @@
 
   </div>
 
-  <!-- WHATSAPP FLOAT -->
-
-  <a href="https://wa.me/528124003388"
+  <a href="https://wa.me/528123372627"
   class="whatsapp-float"
   target="_blank">
     💬
   </a>
-
-  <!-- AOS -->
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -841,8 +851,6 @@
 
       let total = selectedPrice * days;
 
-      // DESCUENTO MÁS DE 7 DÍAS
-
       if(days >= 7){
 
         total = total * 0.9;
@@ -862,7 +870,7 @@
 
       const url =
 
-`https://wa.me/528124003388?text=${encodeURIComponent(message)}`;
+`https://wa.me/528123372627?text=${encodeURIComponent(message)}`;
 
       window.open(url, '_blank');
     }
