@@ -46,11 +46,12 @@
       background:white;
       color:#111;
       line-height:1.6;
+      overflow-x:hidden;
     }
 
     nav{
       width:100%;
-      padding:22px 8%;
+      padding:20px 8%;
       display:flex;
       justify-content:space-between;
       align-items:center;
@@ -312,6 +313,7 @@
       border:1px solid rgba(0,0,0,0.1);
       font-family:'Montserrat', sans-serif;
       width:100%;
+      font-size:16px;
     }
 
     textarea{
@@ -328,13 +330,15 @@
       width:100%;
       height:100%;
       background:rgba(0,0,0,0.6);
+      overflow-y:auto;
+      padding:20px;
     }
 
     .modal-content{
       background:white;
-      width:90%;
+      width:100%;
       max-width:500px;
-      margin:8% auto;
+      margin:50px auto;
       padding:40px;
       border-radius:25px;
       position:relative;
@@ -365,8 +369,8 @@
       position:fixed;
       width:65px;
       height:65px;
-      bottom:30px;
-      right:30px;
+      bottom:25px;
+      right:25px;
       background:#25D366;
       color:white;
       border-radius:50%;
@@ -392,21 +396,69 @@
 
     @media(max-width:900px){
 
+      nav{
+        padding:18px 5%;
+      }
+
       nav ul{
         display:none;
       }
 
+      .logo{
+        font-size:1.7rem;
+      }
+
+      .hero{
+        padding:120px 5% 80px;
+      }
+
       .hero h1{
-        font-size:3rem;
+        font-size:2.8rem;
+      }
+
+      .hero p{
+        font-size:1rem;
       }
 
       .hero img{
-        width:240px;
+        width:220px;
+      }
+
+      section{
+        padding:80px 5%;
+      }
+
+      .section-title h2{
+        font-size:2.4rem;
       }
 
       .about-content,
       .contact-container{
         grid-template-columns:1fr;
+      }
+
+      .about-image{
+        height:350px;
+      }
+
+      .vehicle-grid{
+        grid-template-columns:1fr;
+      }
+
+      .vehicle-card img{
+        height:220px;
+      }
+
+      .modal-content{
+        padding:30px 20px;
+      }
+
+      .whatsapp-float{
+        width:58px;
+        height:58px;
+        font-size:26px;
+        right:18px;
+        bottom:18px;
       }
 
     }
@@ -467,22 +519,22 @@
 
     <div class="service-card">
       <h3>🚐 Traslados Privados</h3>
-      <p>Servicio puntual y cómodo a Aeropuertos, Eventos, Conciertos.</p>
+      <p>Servicio puntual y cómodo a aeropuertos, eventos y conciertos.</p>
     </div>
 
     <div class="service-card">
-      <h3>👤 Tranporte de Personal</h3>
-      <p>Transporte puntual y seguro para tus empleados.</p>
+      <h3>👤 Transporte de Personal</h3>
+      <p>Servicio puntual y seguro para empresas y colaboradores.</p>
     </div>
 
     <div class="service-card">
-      <h3>🏫 Transporte escolar</h3>
+      <h3>🏫 Transporte Escolar</h3>
       <p>Soluciones seguras y confiables para estudiantes.</p>
     </div>
 
     <div class="service-card">
-      <h3>🚐 Transporte de personal</h3>
-      <p>Servicio puntual y seguro para empresas y colaboradores.</p>
+      <h3>🚘 Renta de Vehículos</h3>
+      <p>Autos, camionetas y vans con o sin chofer.</p>
     </div>
 
   </div>
@@ -504,10 +556,8 @@
         <h4>Nissan Versa 2025</h4>
         <p>⚙️ Automático</p>
         <p>👥 5 pasajeros</p>
-        <p>💰 $1,500 MXN / día</p>
-        <button class="btn" onclick="openQuote('Nissan Versa 2025',1500)">
-          Cotizar ahora
-        </button>
+        <p>💰 Desde $1,500 MXN / día</p>
+        <button class="btn" onclick="openQuote('Nissan Versa 2025')">Cotizar ahora</button>
       </div>
     </div>
 
@@ -517,10 +567,8 @@
         <h4>Nissan Versa 2022</h4>
         <p>⚙️ Standard</p>
         <p>👥 5 pasajeros</p>
-        <p>💰 $1,500 MXN / día</p>
-        <button class="btn" onclick="openQuote('Nissan Versa 2022',1500)">
-          Cotizar ahora
-        </button>
+        <p>💰 Desde $1,500 MXN / día</p>
+        <button class="btn" onclick="openQuote('Nissan Versa 2022')">Cotizar ahora</button>
       </div>
     </div>
 
@@ -528,12 +576,10 @@
       <img src="https://toyotaaeropuerto.com.mx/wp-content/uploads/2022/10/yaris-gris.jpg">
       <div class="vehicle-info">
         <h4>Toyota Yaris 2024</h4>
-        <p>⚙️ Automatico</p>
+        <p>⚙️ Automático</p>
         <p>👥 5 pasajeros</p>
-        <p>💰 $1,500 MXN / día</p>
-        <button class="btn" onclick="openQuote('Toyota Yaris 2024',1500)">
-          Cotizar ahora
-        </button>
+        <p>💰 Desde $1,500 MXN / día</p>
+        <button class="btn" onclick="openQuote('Toyota Yaris 2024')">Cotizar ahora</button>
       </div>
     </div>
 
@@ -543,10 +589,8 @@
         <h4>Nissan March 2024</h4>
         <p>⚙️ Automático</p>
         <p>👥 4 pasajeros</p>
-        <p>💰 $1,200 MXN / día</p>
-        <button class="btn" onclick="openQuote('Nissan March 2024',1200)">
-          Cotizar ahora
-        </button>
+        <p>💰 Desde $1,200 MXN / día</p>
+        <button class="btn" onclick="openQuote('Nissan March 2024')">Cotizar ahora</button>
       </div>
     </div>
 
@@ -556,10 +600,8 @@
         <h4>Chevrolet Aveo 2025</h4>
         <p>⚙️ Automático</p>
         <p>👥 5 pasajeros</p>
-        <p>💰 $1,500 MXN / día</p>
-        <button class="btn" onclick="openQuote('Chevrolet Aveo 2025',1500)">
-          Cotizar ahora
-        </button>
+        <p>💰 Desde $1,500 MXN / día</p>
+        <button class="btn" onclick="openQuote('Chevrolet Aveo 2025')">Cotizar ahora</button>
       </div>
     </div>
 
@@ -567,12 +609,10 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/2025_Ford_Ranger_Wildtrak_X_EcoBlue_4x4_-_1996cc_2.0_%28205PS%29_Diesel_-_Agate_Black_-_02-2025%2C_Front.jpg">
       <div class="vehicle-info">
         <h4>Ford Wildtrak Negra 2025</h4>
+        <p>⚙️ Automática</p>
         <p>👥 5 pasajeros</p>
-        <p>⚙️  Automática</p>
-        <p>💰 $3,500 MXN / día</p>
-        <button class="btn" onclick="openQuote('Ford Wildtrak Negra 2025',3500)">
-          Cotizar ahora
-        </button>
+        <p>💰 Desde $3,500 MXN / día</p>
+        <button class="btn" onclick="openQuote('Ford Wildtrak Negra 2025')">Cotizar ahora</button>
       </div>
     </div>
 
@@ -580,12 +620,10 @@
       <img src="https://toyotaoaxaca.com.mx/wp-content/uploads/2021/01/sienna-personalidad.jpg">
       <div class="vehicle-info">
         <h4>Toyota Sienna 2022</h4>
+        <p>⚙️ Automática</p>
         <p>👥 8 pasajeros</p>
-        <p>⚙️  Automática</p>
-        <p>💰 $2,800 MXN / día</p>
-        <button class="btn" onclick="openQuote('Toyota Sienna 2022',2800)">
-          Cotizar ahora
-        </button>
+        <p>💰 Desde $2,800 MXN / día</p>
+        <button class="btn" onclick="openQuote('Toyota Sienna 2022')">Cotizar ahora</button>
       </div>
     </div>
 
@@ -593,12 +631,10 @@
       <img src="https://acnews.blob.core.windows.net/imgnews/large/NAZ_64b96def40514eefa6051aa275c19418.jpg">
       <div class="vehicle-info">
         <h4>Toyota Hiace 2020</h4>
+        <p>⚙️ Standard</p>
         <p>👥 12 pasajeros</p>
-        <p>⚙️  Standard</p>
-        <p>💰 $3,500 MXN / día</p>
-        <button class="btn" onclick="openQuote('Toyota Hiace 2020',3500)">
-          Cotizar ahora
-        </button>
+        <p>💰 Desde $3,500 MXN / día</p>
+        <button class="btn" onclick="openQuote('Toyota Hiace 2020')">Cotizar ahora</button>
       </div>
     </div>
 
@@ -606,12 +642,10 @@
       <img src="https://acnews.blob.core.windows.net/imgnews/large/NAZ_64b96def40514eefa6051aa275c19418.jpg">
       <div class="vehicle-info">
         <h4>Toyota Hiace 2019</h4>
+        <p>⚙️ Standard</p>
         <p>👥 15 pasajeros</p>
-        <p>⚙️  Standard</p>
-        <p>💰 $3,500 MXN / día</p>
-        <button class="btn" onclick="openQuote('Toyota Hiace 2019',3500)">
-          Cotizar ahora
-        </button>
+        <p>💰 Desde $3,500 MXN / día</p>
+        <button class="btn" onclick="openQuote('Toyota Hiace 2019')">Cotizar ahora</button>
       </div>
     </div>
 
@@ -619,12 +653,10 @@
       <img src="https://www.foton.com.pe/wp-content/uploads/2017/10/K1-Auto-2.png">
       <div class="vehicle-info">
         <h4>Foton Royal Saloon 2024</h4>
+        <p>⚙️ Standard</p>
         <p>👥 16 pasajeros</p>
-        <p>⚙️  Standard</p>
-        <p>💰 $3,500 MXN / día</p>
-        <button class="btn" onclick="openQuote('Foton Royal Saloon 2024',3500)">
-          Cotizar ahora
-        </button>
+        <p>💰 Desde $3,500 MXN / día</p>
+        <button class="btn" onclick="openQuote('Foton Royal Saloon 2024')">Cotizar ahora</button>
       </div>
     </div>
 
@@ -632,14 +664,13 @@
       <img src="https://klpsa.com/wp-content/uploads/2024/01/Kingo-L-Vans-2.jpg">
       <div class="vehicle-info">
         <h4>King Long Furgo 2024</h4>
+        <p>⚙️ Standard</p>
         <p>👥 16 pasajeros</p>
-        <p>⚙️  Standard</p>
-        <p>💰 $3,500 MXN / día</p>
-        <button class="btn" onclick="openQuote('King Long Furgo 2024',3500)">
-          Cotizar ahora
-        </button>
+        <p>💰 Desde $3,500 MXN / día</p>
+        <button class="btn" onclick="openQuote('King Long Furgo 2024')">Cotizar ahora</button>
       </div>
     </div>
+
   </div>
 
 </section>
@@ -793,12 +824,10 @@ AOS.init({
 });
 
 let selectedVehicle = "";
-let selectedPrice = 0;
 
-function openQuote(vehicle, price){
+function openQuote(vehicle){
 
   selectedVehicle = vehicle;
-  selectedPrice = price;
 
   document.getElementById("quoteModal").style.display = "block";
 
@@ -850,20 +879,6 @@ function sendWhatsApp(){
     return;
   }
 
-  let finalPrice = selectedPrice;
-
-  if(driverOption === "Con chofer"){
-
-    finalPrice += 1000;
-  }
-
-  let total = finalPrice * totalDays;
-
-  if(totalDays >= 7){
-
-    total = total * 0.9;
-  }
-
   const message =
 
 `Hola, me interesa realizar una cotización:
@@ -878,9 +893,7 @@ function sendWhatsApp(){
 
 📅 Fecha final: ${endDate}
 
-🕒 Total de días: ${totalDays}
-
-💰 Total estimado: $${Math.round(total)} MXN`;
+🕒 Total de días: ${totalDays}`;
 
   const url =
 
