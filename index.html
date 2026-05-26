@@ -305,11 +305,13 @@
     }
 
     input,
-    textarea{
+    textarea,
+    select{
       padding:18px;
       border-radius:14px;
       border:1px solid rgba(0,0,0,0.1);
       font-family:'Montserrat', sans-serif;
+      width:100%;
     }
 
     textarea{
@@ -346,8 +348,8 @@
       font-family:'Cormorant Garamond', serif;
     }
 
-    .modal-content input{
-      width:100%;
+    .modal-content input,
+    .modal-content select{
       margin-bottom:20px;
     }
 
@@ -375,11 +377,6 @@
       text-decoration:none;
       box-shadow:0 8px 25px rgba(0,0,0,0.2);
       z-index:999;
-      transition:0.3s;
-    }
-
-    .whatsapp-float:hover{
-      transform:scale(1.1);
     }
 
     footer{
@@ -412,10 +409,6 @@
         grid-template-columns:1fr;
       }
 
-      .modal-content{
-        margin:20% auto;
-      }
-
     }
 
   </style>
@@ -424,469 +417,411 @@
 
 <body>
 
-  <nav>
+<nav>
 
-    <div class="logo">GAR & RAN</div>
+  <div class="logo">GAR & RAN</div>
 
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#cotizador">Cotizador</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
+  <ul>
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#cotizador">Cotizador</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
 
-  </nav>
+</nav>
 
-  <section class="hero" id="inicio">
+<section class="hero" id="inicio">
 
-    <div class="hero-content" data-aos="fade-up">
+  <div class="hero-content" data-aos="fade-up">
 
-      <img src="logo.png" alt="GAR & RAN">
+    <img src="logo.png" alt="GAR & RAN">
 
-      <h1>
-        Transporte privado con
-        <span>elegancia y confianza</span>
-      </h1>
+    <h1>
+      Transporte privado con
+      <span>elegancia y confianza</span>
+    </h1>
 
-      <p>
-        Más de 30 años ofreciendo soluciones de transporte seguras,
-        cómodas y profesionales para aeropuerto, eventos,
-        conciertos, transporte escolar y renta de vehículos.
-      </p>
+    <p>
+      Más de 30 años ofreciendo soluciones de transporte seguras,
+      cómodas y profesionales para aeropuerto, eventos,
+      conciertos, transporte escolar y renta de vehículos.
+    </p>
 
-      <a href="#cotizador" class="btn">
-        Cotizar ahora
-      </a>
+    <a href="#cotizador" class="btn">
+      Cotizar ahora
+    </a>
 
+  </div>
+
+</section>
+
+<section id="servicios">
+
+  <div class="section-title">
+    <h2>Servicios</h2>
+    <div class="gold-line"></div>
+  </div>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <h3>✈️ Traslados al aeropuerto</h3>
+      <p>Servicio puntual y cómodo para viajes personales y ejecutivos.</p>
     </div>
 
-  </section>
-
-  <section id="servicios">
-
-    <div class="section-title">
-      <h2>Servicios</h2>
-      <div class="gold-line"></div>
+    <div class="service-card">
+      <h3>🎤 Eventos y conciertos</h3>
+      <p>Transporte seguro para grupos y ocasiones especiales.</p>
     </div>
 
-    <div class="services-grid">
-
-      <div class="service-card" data-aos="fade-up">
-        <h3>✈️ Traslados al aeropuerto</h3>
-        <p>Servicio puntual y cómodo para viajes personales y ejecutivos.</p>
-      </div>
-
-      <div class="service-card" data-aos="fade-up">
-        <h3>🎤 Eventos y conciertos</h3>
-        <p>Transporte seguro para grupos y ocasiones especiales.</p>
-      </div>
-
-      <div class="service-card" data-aos="fade-up">
-        <h3>🏫 Transporte escolar</h3>
-        <p>Soluciones seguras y confiables para estudiantes.</p>
-      </div>
-
-      <div class="service-card" data-aos="fade-up">
-        <h3>✈️ Transporte de personal</h3>
-        <p>Transporte seguro y puntual para empleados y empresas.</p>
-      </div>
-
-      <div class="service-card" data-aos="fade-up">
-        <h3>🚐 Renta de unidades</h3>
-        <p>Autos, camionetas y vans disponibles para viajes locales y foráneos.</p>
-      </div>
-
+    <div class="service-card">
+      <h3>🏫 Transporte escolar</h3>
+      <p>Soluciones seguras y confiables para estudiantes.</p>
     </div>
 
-  </section>
-
-  <section id="cotizador">
-
-    <div class="section-title">
-      <h2>Catálogo y Cotizador</h2>
-      <div class="gold-line"></div>
-    </div>
-
-    <div class="vehicle-grid">
-
-      <div class="vehicle-card" data-aos="fade-up">
-
-        <img src="https://www.nissanautopolis.com/resourcefiles/vehicle-details-color-images/versa-gris-oxford.jpg">
-
-        <div class="vehicle-info">
-
-          <h4>Nissan Versa 2025</h4>
-
-          <p>⚙️ Automático</p>
-          <p>👥 5 pasajeros</p>
-          <p>💰 $1,500 MXN / día</p>
-
-          <button class="btn"
-          onclick="openQuote('Nissan Versa 2025',1500)">
-            Cotizar ahora
-          </button>
-
-        </div>
-
-      </div>
-
-      <div class="vehicle-card" data-aos="fade-up">
-
-        <img src="https://www.nissanlapaz.com.mx/resourcefiles/newvehicleimages/march.jpg">
-
-        <div class="vehicle-info">
-
-          <h4>Nissan March 2024</h4>
-
-          <p>⚙️ Automático</p>
-          <p>👥 4 pasajeros</p>
-          <p>💰 $1,200 MXN / día</p>
-
-          <button class="btn"
-          onclick="openQuote('Nissan March 2024',1200)">
-            Cotizar ahora
-          </button>
-
-        </div>
-
-      </div>
-
-      <div class="vehicle-card" data-aos="fade-up">
-
-        <img src="https://tuagenciadelrio.com/wp-content/uploads/2023/06/HB-LT-Mugshot-34-frontal_izquierdo_Alta_GGB-Azul-Persuasion.png">
-
-        <div class="vehicle-info">
-
-          <h4>Chevrolet Aveo 2025</h4>
-
-          <p>⚙️ Automático</p>
-          <p>👥 5 pasajeros</p>
-          <p>💰 $1,500 MXN / día</p>
-
-          <button class="btn"
-          onclick="openQuote('Chevrolet Aveo 2025',1500)">
-            Cotizar ahora
-          </button>
-
-        </div>
-
-      </div>
-
-      <div class="vehicle-card" data-aos="fade-up">
-
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/2025_Ford_Ranger_Wildtrak_X_EcoBlue_4x4_-_1996cc_2.0_%28205PS%29_Diesel_-_Agate_Black_-_02-2025%2C_Front.jpg">
-
-        <div class="vehicle-info">
-
-          <h4>Ford Wildtrak Negra 2025</h4>
-
-          <p>⚙️ Automática</p>
-          <p>👥 5 pasajeros</p>
-          <p>💰 $3,500 MXN / día</p>
-
-          <button class="btn"
-          onclick="openQuote('Ford Wildtrak Negra 2025',3500)">
-            Cotizar ahora
-          </button>
-
-        </div>
-
-      </div>
-
-      <div class="vehicle-card" data-aos="fade-up">
-
-        <img src="https://toyotaoaxaca.com.mx/wp-content/uploads/2021/01/sienna-personalidad.jpg">
-
-        <div class="vehicle-info">
-
-          <h4>Toyota Sienna 2022</h4>
-
-          <p>⚙️ Automática</p>
-          <p>👥 8 pasajeros</p>
-          <p>💰 $2,800 MXN / día</p>
-
-          <button class="btn"
-          onclick="openQuote('Toyota Sienna 2022',2800)">
-            Cotizar ahora
-          </button>
-
-        </div>
-
-      </div>
-
-      <div class="vehicle-card" data-aos="fade-up">
-
-        <img src="https://http2.mlstatic.com/D_NQ_NP_993146-MLA81868231811_012025-F.jpg">
-
-        <div class="vehicle-info">
-
-          <h4>Toyota Hiace 2020</h4>
-
-          <p>👥 12 pasajeros</p>
-          <p>💰 $3,500 MXN / día</p>
-
-          <button class="btn"
-          onclick="openQuote('Toyota Hiace 2020',3500)">
-            Cotizar ahora
-          </button>
-
-        </div>
-
-      </div>
-
-      <div class="vehicle-card" data-aos="fade-up">
-
-        <img src="https://http2.mlstatic.com/D_NQ_NP_993146-MLA81868231811_012025-F.jpg">
-
-        <div class="vehicle-info">
-
-          <h4>Toyota Hiace 2019</h4>
-
-          <p>👥 15 pasajeros</p>
-          <p>💰 $3,500 MXN / día</p>
-
-          <button class="btn"
-          onclick="openQuote('Toyota Hiace 2019',3500)">
-            Cotizar ahora
-          </button>
-
-        </div>
-
-      </div>
-
-      <div class="vehicle-card" data-aos="fade-up">
-
-        <img src="https://forcenter.cl/img/modelos/45/FT-CREW-EXTERIOR-1.jpg">
-
-        <div class="vehicle-info">
-
-          <h4>Foton Royal Saloon 2024</h4>
-
-          <p>👥 16 pasajeros</p>
-          <p>💰 $3,500 MXN / día</p>
-
-          <button class="btn"
-          onclick="openQuote('Foton Royal Saloon 2024',3500)">
-            Cotizar ahora
-          </button>
-
-        </div>
-
-      </div>
-
-      <div class="vehicle-card" data-aos="fade-up">
-
-        <img src="https://klpsa.com/wp-content/uploads/2024/01/Kingo-L-Vans-2.jpg">
-
-        <div class="vehicle-info">
-
-          <h4>King Long Furgo 2024</h4>
-
-          <p>👥 16 pasajeros</p>
-          <p>💰 $3,500 MXN / día</p>
-
-          <button class="btn"
-          onclick="openQuote('King Long Furgo 2024',3500)">
-            Cotizar ahora
-          </button>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="about" id="nosotros">
-
-    <div class="about-content">
-
-      <div data-aos="fade-right">
-
-        <div class="experience">
-          +30 años
-        </div>
-
-        <h2>Experiencia que genera confianza</h2>
-
-        <p>
-          En GAR & RAN nos especializamos en brindar un servicio
-          de transporte profesional, elegante y seguro.
-        </p>
-
-        <p>
-          Nuestra experiencia nos ha permitido convertirnos en
-          una opción confiable para familias, empresas y viajeros.
-        </p>
-
-      </div>
-
-      <div class="about-image" data-aos="fade-left"></div>
-
-    </div>
-
-  </section>
-
-  <section id="contacto">
-
-    <div class="section-title">
-      <h2>Contacto</h2>
-      <div class="gold-line"></div>
-    </div>
-
-    <div class="contact-container">
-
-      <div class="contact-info">
-
-        <h3>Información</h3>
-
-        <p>📍 Monterrey, Nuevo León</p>
-        <p>📞 +52 81 2337 2627</p>
-        <p>📧 garrantransporte@gmail.com</p>
-        <p>📱 @garran_transportes</p>
-        <p>💬 WhatsApp disponible</p>
-
-      </div>
-
-      <form action="https://formsubmit.co/garrantransporte@gmail.com" method="POST">
-
-        <input type="hidden" name="_captcha" value="false">
-
-        <input type="text" name="nombre" placeholder="Nombre" required>
-
-        <input type="email" name="correo" placeholder="Correo electrónico" required>
-
-        <textarea name="mensaje" placeholder="Escribe tu mensaje"></textarea>
-
-        <button class="btn">
-          Enviar mensaje
-        </button>
-
-      </form>
-
-    </div>
-
-  </section>
-
-  <footer>
-    © 2025 <span>GAR & RAN Agencias</span> — Todos los derechos reservados
-  </footer>
-
-  <div id="quoteModal" class="modal">
-
-    <div class="modal-content">
-
-      <span class="close" onclick="closeModal()">
-        &times;
-      </span>
-
-      <h3 id="vehicleTitle"></h3>
-
-      <input type="date" id="quoteDate">
-
-      <input type="number"
-      id="quoteDays"
-      placeholder="Cantidad de días">
-
-      <button class="btn"
-      onclick="sendWhatsApp()">
-
-        Reservar ahora
-
-      </button>
-
+    <div class="service-card">
+      <h3>🚐 Transporte de personal</h3>
+      <p>Servicio puntual y seguro para empresas y colaboradores.</p>
     </div>
 
   </div>
 
-  <a href="https://wa.me/528123372627"
-  class="whatsapp-float"
-  target="_blank">
-    💬
-  </a>
+</section>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<section id="cotizador">
 
-  <script>
+  <div class="section-title">
+    <h2>Catálogo y Cotizador</h2>
+    <div class="gold-line"></div>
+  </div>
 
-    AOS.init({
-      duration:1000,
-      once:true
-    });
+  <div class="vehicle-grid">
 
-    let selectedVehicle = "";
-    let selectedPrice = 0;
+    <div class="vehicle-card">
+      <img src="https://www.nissanautopolis.com/resourcefiles/vehicle-details-color-images/versa-gris-oxford.jpg">
+      <div class="vehicle-info">
+        <h4>Nissan Versa 2025</h4>
+        <p>⚙️ Automático</p>
+        <p>👥 5 pasajeros</p>
+        <p>💰 $1,500 MXN / día</p>
+        <button class="btn" onclick="openQuote('Nissan Versa 2025',1500)">
+          Cotizar ahora
+        </button>
+      </div>
+    </div>
 
-    function openQuote(vehicle, price){
+    <div class="vehicle-card">
+      <img src="https://www.nissanlapaz.com.mx/resourcefiles/newvehicleimages/march.jpg">
+      <div class="vehicle-info">
+        <h4>Nissan March 2024</h4>
+        <p>⚙️ Automático</p>
+        <p>👥 4 pasajeros</p>
+        <p>💰 $1,200 MXN / día</p>
+        <button class="btn" onclick="openQuote('Nissan March 2024',1200)">
+          Cotizar ahora
+        </button>
+      </div>
+    </div>
 
-      selectedVehicle = vehicle;
-      selectedPrice = price;
+    <div class="vehicle-card">
+      <img src="https://tuagenciadelrio.com/wp-content/uploads/2023/06/HB-LT-Mugshot-34-frontal_izquierdo_Alta_GGB-Azul-Persuasion.png">
+      <div class="vehicle-info">
+        <h4>Chevrolet Aveo 2025</h4>
+        <p>⚙️ Automático</p>
+        <p>👥 5 pasajeros</p>
+        <p>💰 $1,500 MXN / día</p>
+        <button class="btn" onclick="openQuote('Chevrolet Aveo 2025',1500)">
+          Cotizar ahora
+        </button>
+      </div>
+    </div>
 
-      document.getElementById("quoteModal").style.display = "block";
+    <div class="vehicle-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/2025_Ford_Ranger_Wildtrak_X_EcoBlue_4x4_-_1996cc_2.0_%28205PS%29_Diesel_-_Agate_Black_-_02-2025%2C_Front.jpg">
+      <div class="vehicle-info">
+        <h4>Ford Wildtrak Negra 2025</h4>
+        <p>👥 5 pasajeros</p>
+        <p>💰 $3,500 MXN / día</p>
+        <button class="btn" onclick="openQuote('Ford Wildtrak Negra 2025',3500)">
+          Cotizar ahora
+        </button>
+      </div>
+    </div>
 
-      document.getElementById("vehicleTitle").innerHTML = vehicle;
-    }
+    <div class="vehicle-card">
+      <img src="https://toyotaoaxaca.com.mx/wp-content/uploads/2021/01/sienna-personalidad.jpg">
+      <div class="vehicle-info">
+        <h4>Toyota Sienna 2022</h4>
+        <p>👥 8 pasajeros</p>
+        <p>💰 $2,800 MXN / día</p>
+        <button class="btn" onclick="openQuote('Toyota Sienna 2022',2800)">
+          Cotizar ahora
+        </button>
+      </div>
+    </div>
 
-    function closeModal(){
+  </div>
 
-      document.getElementById("quoteModal").style.display = "none";
-    }
+</section>
 
-    function sendWhatsApp(){
+<section class="about" id="nosotros">
 
-      const days =
-      document.getElementById("quoteDays").value;
+  <div class="about-content">
 
-      const date =
-      document.getElementById("quoteDate").value;
+    <div>
 
-      if(!days || !date){
+      <div class="experience">
+        +30 años
+      </div>
 
-        alert("Completa todos los campos");
+      <h2>Experiencia que genera confianza</h2>
 
-        return;
-      }
+      <p>
+        En GAR & RAN nos especializamos en brindar un servicio profesional,
+        elegante y seguro.
+      </p>
 
-      let total = selectedPrice * days;
+      <p>
+        Nuestra experiencia nos ha convertido en una opción confiable para
+        familias, empresas y viajeros.
+      </p>
 
-      if(days >= 7){
+    </div>
 
-        total = total * 0.9;
-      }
+    <div class="about-image"></div>
 
-      const message =
+  </div>
 
-`Hola, me interesa reservar:
+</section>
+
+<section id="contacto">
+
+  <div class="section-title">
+    <h2>Contacto</h2>
+    <div class="gold-line"></div>
+  </div>
+
+  <div class="contact-container">
+
+    <div class="contact-info">
+
+      <h3>Información</h3>
+
+      <p>📍 Monterrey, Nuevo León</p>
+      <p>📞 +52 81 2337 2627</p>
+      <p>📧 garrantransporte@gmail.com</p>
+      <p>📱 @garran_transportes</p>
+
+    </div>
+
+    <form action="https://formsubmit.co/garrantransporte@gmail.com" method="POST">
+
+      <input type="hidden" name="_captcha" value="false">
+
+      <input type="text" name="nombre" placeholder="Nombre" required>
+
+      <input type="email" name="correo" placeholder="Correo electrónico" required>
+
+      <textarea name="mensaje" placeholder="Escribe tu mensaje"></textarea>
+
+      <button class="btn">
+        Enviar mensaje
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2025 <span>GAR & RAN Agencias</span> — Todos los derechos reservados
+</footer>
+
+<!-- MODAL -->
+
+<div id="quoteModal" class="modal">
+
+  <div class="modal-content">
+
+    <span class="close" onclick="closeModal()">
+      &times;
+    </span>
+
+    <h3 id="vehicleTitle"></h3>
+
+    <select id="serviceType">
+
+      <option value="">
+        Selecciona el tipo de servicio
+      </option>
+
+      <option value="Renta de unidad">
+        Renta de unidad
+      </option>
+
+      <option value="Servicio de transporte">
+        Servicio de transporte
+      </option>
+
+    </select>
+
+    <select id="driverOption">
+
+      <option value="">
+        Selecciona una opción
+      </option>
+
+      <option value="Con chofer">
+        Con chofer
+      </option>
+
+      <option value="Sin chofer">
+        Sin chofer
+      </option>
+
+    </select>
+
+    <input type="date" id="startDate">
+
+    <input type="date" id="endDate">
+
+    <button class="btn"
+    onclick="sendWhatsApp()">
+
+      Cotizar ahora
+
+    </button>
+
+  </div>
+
+</div>
+
+<a href="https://wa.me/528123372627"
+class="whatsapp-float"
+target="_blank">
+💬
+</a>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+
+AOS.init({
+  duration:1000,
+  once:true
+});
+
+let selectedVehicle = "";
+let selectedPrice = 0;
+
+function openQuote(vehicle, price){
+
+  selectedVehicle = vehicle;
+  selectedPrice = price;
+
+  document.getElementById("quoteModal").style.display = "block";
+
+  document.getElementById("vehicleTitle").innerHTML = vehicle;
+}
+
+function closeModal(){
+
+  document.getElementById("quoteModal").style.display = "none";
+}
+
+function sendWhatsApp(){
+
+  const startDate =
+  document.getElementById("startDate").value;
+
+  const endDate =
+  document.getElementById("endDate").value;
+
+  const serviceType =
+  document.getElementById("serviceType").value;
+
+  const driverOption =
+  document.getElementById("driverOption").value;
+
+  if(!startDate || !endDate || !serviceType || !driverOption){
+
+    alert("Completa todos los campos");
+
+    return;
+  }
+
+  const start =
+  new Date(startDate);
+
+  const end =
+  new Date(endDate);
+
+  const difference =
+  end - start;
+
+  const totalDays =
+  Math.ceil(difference / (1000 * 60 * 60 * 24)) + 1;
+
+  if(totalDays <= 0){
+
+    alert("Selecciona fechas válidas");
+
+    return;
+  }
+
+  let finalPrice = selectedPrice;
+
+  if(driverOption === "Con chofer"){
+
+    finalPrice += 1000;
+  }
+
+  let total = finalPrice * totalDays;
+
+  if(totalDays >= 7){
+
+    total = total * 0.9;
+  }
+
+  const message =
+
+`Hola, me interesa realizar una cotización:
 
 🚘 Unidad: ${selectedVehicle}
 
-📅 Fecha: ${date}
+📌 Tipo de servicio: ${serviceType}
 
-🕒 Días: ${days}
+👨‍✈️ Opción: ${driverOption}
 
-💰 Total estimado: $${total} MXN`;
+📅 Fecha inicio: ${startDate}
 
-      const url =
+📅 Fecha final: ${endDate}
+
+🕒 Total de días: ${totalDays}
+
+💰 Total estimado: $${Math.round(total)} MXN`;
+
+  const url =
 
 `https://wa.me/528123372627?text=${encodeURIComponent(message)}`;
 
-      window.open(url, '_blank');
-    }
+  window.open(url, '_blank');
+}
 
-    window.onclick = function(event){
+window.onclick = function(event){
 
-      const modal =
-      document.getElementById("quoteModal");
+  const modal =
+  document.getElementById("quoteModal");
 
-      if(event.target == modal){
+  if(event.target == modal){
 
-        modal.style.display = "none";
-      }
-    }
+    modal.style.display = "none";
+  }
+}
 
-  </script>
+</script>
 
 </body>
 </html>
